@@ -3,6 +3,9 @@
 systemctl stop lxdm.service
 killall sbengine
 
+# Backlight for Colibri iMX6
+echo 1 > /sys/class/backlight/backlight.15/bl_power
+
 echo 0 >> /sys/class/graphics/fbcon/cursor_blink
 echo -e '\033[9;0]' >> /dev/tty1
 echo 0 >> /sys/class/graphics/fb0/blank
